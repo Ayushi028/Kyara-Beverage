@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyara Beverages</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="Kyara Beverages - Refreshment, Reimagined" />
+  <meta property="og:image" content="images/logo.png" />
+</head>
+<body>
+
+  <header class="hero">
+    <img src="images/logo.png" alt="Kyara Logo" class="logo" />
+    <h1>Refreshment, Reimagined</h1>
+  </header>
+
+  <section class="about fade-up" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Kyara</h2>
+    <p>
+      Kyara Beverages is on a mission to reimagine refreshment with millet-based fruit drinks.
+      Our goal is to craft beverages that are nutritious, refreshing, and real.
+    </p>
+  </section>
+
+  <section class="products fade-up">
+    <h2>Our Drinks</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="images/drink1.png" alt="Mango Bliss drink in a chilled glass" loading="lazy" />
+        <h3>Mango Bliss</h3>
+        <p>A tropical delight with a twist of health.</p>
+      </div>
+      <div class="product">
+        <img src="images/drink2.jpg" alt="Berry Spark millet-based berry drink" loading="lazy" />
+        <h3>Berry Spark</h3>
+        <p>Refreshing berries with a millet punch.</p>
+      </div>
+      <div class="product">
+        <img src="images/drinkk.webp" alt="Minty Chill citrus and mint beverage" loading="lazy" />
+        <h3>Minty Chill</h3>
+        <p>Cool mint and citrus fusion for summer days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact fade-up">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required
+        oninvalid="this.setCustomValidity('Please enter a valid email')" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kyara Beverages</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-up');
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
